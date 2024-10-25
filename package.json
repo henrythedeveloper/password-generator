@@ -1,0 +1,14 @@
+{
+  "name": "Password-generator",
+  "description": "https://github.com/henrythedeveloper/password-generator",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}

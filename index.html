@@ -1,0 +1,67 @@
+<!-- 
+TODO:
+Ability to set password length, add "copy-on-click", toggle "symbols" and "numbers" on/off
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="switch">
+        <label class="theme-switch" for ="checkbox">
+            <input type="checkbox" id="checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
+    <div id="mainContainer">
+        <div id="textContainer">
+            <h1>Generate a</h1>
+            <h1 id="h1Emphasis">random password</h1>
+            <p>Never use an insecure password again.</p>
+        </div>
+
+
+        <div class="peripheralContainer">
+            <button id="generateBtn" onclick="generatePassword()">Generate Passwords</button>
+            <div class="sliderLength">
+                <p class="peripP">Password Length</p>
+                <span id="sliderR">13</span>
+                <input type="range" min="8" max="100" value="13" class="sliderR" id="sliderR" oninput="showVal(this.value)"
+                onchange="showVal(this.value)">
+            </div>
+            <div class = "peripSwitchContainer">
+                <p class="peripP">Include Symbols</p>
+                <div class="peripSwitch">
+                    <label class="perip-switch" for="symbols">
+                        <input type="checkbox" id="symbols">
+                        <div class="pSlider round"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="peripSwitchContainer">
+                <p class="peripP">Include Numbers</p>
+                <div class="peripSwitch">
+                    <label class="perip-switch" for="numbers">
+                        <input type="checkbox" id="numbers">
+                        <div class="pSlider round"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div id="passwordContainer">
+            <input type="text" class="password" id="password1" onclick="copy1()" readonly>
+            <input type="text" class="password" id="password2" onclick="copy2()" readonly>
+        </div>  
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
+
